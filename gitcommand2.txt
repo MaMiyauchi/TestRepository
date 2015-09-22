@@ -1,0 +1,83 @@
+cd ~/enpit
+vagrant up
+vagrant ssh
+
+rbenv
+ruby --version
+rbenv global 2.1.6
+rbenv local 2.1.6
+
+irb
+require 'pp'
+pp $LOAD_PATH
+
+3回
+gem search ^rails
+
+mkdir lib
+ctrl x s 保存
+ctrl x c 編集終了
+
+curl -u MaMiYAUCHI https://rubygems.org/api/v1/api_key.yaml >~/.gem/credentials; chmod 0600 ~/.gem/credentials
+
+
+rake release
+rake -T
+rake test
+
+リポジトリを作成
+$ mkdir tutorial
+$ cd tutorial
+$ git init
+git create
+
+
+git status
+git branch new_branchブランチ作成
+git branch -vv確認
+git checkout -b add_license/add_licenseブランチ作成
+git checkout master マスターに移動git 
+clone ローカルに持ってくる
+pull 同期
+git checkout master/マスターブランチに移動
+git pull/update
+
+commit -m"Update"
+git remote -vv
+
+{}_test
+
+git checkout ID:前のcommitに戻す。しかし参照が困難になる
+git checkout master 
+
+git merge new_branch /マスター上でマージ対象ブランチ指定
+git branch -d new_branch/ブランチ削除
+ブランチを変更する前にはコミットする。
+コンフリクトの解消
+emacs README.md/ファイルの確認
+→手作業で修正
+git diff/差分を表示
+git commit -am 'Meage A and B'/コミット
+git log /確認
+
+ブランチをリモートのリポジトリに紐づける
+手元のブランチをギットハブにpush
+git push
+何か作業をするときはブランチを作る
+
+公開されているソースを自分のリポジトリ内における
+git fork
+git commit -am　‘コメント’
+git push -u MaMiyauhi　ブランチ名
+
+ 
+git checkout -b add_license/ブランチ作成・移動
+git push -u origin add_license/はじめに-u必要
+
+git pull-request -m 'add license'
+
+ブランチを作成する前にマスターを最新にする
+git pull
+forkしたものを最新にする
+git fetch --all
+git merge origin/master
